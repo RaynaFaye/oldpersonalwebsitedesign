@@ -1,0 +1,225 @@
+/* Media Queries */
+@media all and (max-width: 992px) {
+  /* Header */
+  .name-block {
+    transform: rotate(0);
+  }
+  /* Privacy policy page */
+  .mentionslegales{
+    padding: 0 50px;
+  }
+  @supports (display: grid) {
+    .name-block {
+      grid-template-rows: 1fr auto auto 1fr auto auto;
+    }
+    .name-block h1.name {
+      grid-row: 2;
+    }
+    .name-block h1.surname {
+      grid-column: 3;
+      grid-row: 5;
+    }
+    .name-block h3 {
+      grid-column: 3;
+      grid-row: 3;
+    }
+    .name-block img {
+      grid-column: 1;
+      grid-row: 4 / 6;
+    }
+    .name-block:before {
+      grid-row: 3;
+    }
+    .name-block:after {
+      grid-row: 6;
+      align-self: start;
+    }
+    .contact .input-area {
+      width: 100%;
+    }
+    /* Service */
+    .services-and-about {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+    .services {
+      grid-row: 1;
+      padding: 0 20px 25px 20px;
+    }
+    .about {
+      grid-row: 2;
+      grid-column: 1;
+      padding: 0 20px 25px 20px;
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .back-top {
+    width: 50px;
+    height: 50px;
+  }
+  @supports (display: grid) {
+    /* Projects */
+    .circle,
+    .circle-overlay {
+      width: 160px;
+      height: 160px;
+    }
+    .circle-overlay {
+      font-size: 12px;
+    }
+    .circle1 {
+      grid-column: 3 / span 3;
+      grid-row: 2 / span 3;
+    }
+    .circle2 {
+      grid-column: 3 / span 3;
+      grid-row: 8 / span 3;
+    }
+    .circle3 {
+      grid-column: 9 / span 3;
+      grid-row: 4 / span 3;
+    }
+    .circle4 {
+      grid-column: 6 / span 2;
+      grid-row: 6 / span 2;
+    }
+    .circle5 {
+      grid-column: 8 / span 2;
+      grid-row: 11 / span 2;
+    }
+    .white1 {
+      grid-column: 11 / span 2;
+      grid-row: 2 / span 2;
+    }
+    .white2 {
+      grid-column: 2 / span 2;
+      grid-row: 12 / span 2;
+    }
+    .white3 {
+      grid-column: 10 / span 2;
+      grid-row: 9 / span 2;
+    }
+    .pink4 {
+      grid-column: 1 / span 2;
+      grid-row: 3 / span 2;
+    }
+    .blue1 {
+      grid-column: 6 / span 2;
+      grid-row: 5 / span 2;
+    }
+    .blue6 {
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 2;
+    }
+  }
+}
+@media all and (max-width: 576px) {
+  /* Privacy Policy */
+  .mentionslegales{
+    padding: 0 10px;
+  }
+  @supports (display: grid) {
+    /* Header */
+    .name-block h1.surname {
+      grid-column: 1;
+    }
+    .name-block img {
+      grid-row: 3/ 5;
+    }
+    /* Projects */
+    .projects {
+      height: 100%;
+    }
+    .circle3 {
+      grid-column: 7 / span 3;
+    }
+    .circle4 {
+      grid-column: 5 / span 2;
+    }
+    .circle5 {
+      grid-column: 7 / span 2;
+      grid-row: 10 / span 2;
+    }
+    .white1 {
+      grid-column: 9 / span 2;
+    }
+    .white2 {
+      grid-column: 3 / span 2;
+      grid-row: 11 / span 2;
+    }
+    .white3 {
+      grid-column: 10 / span 2;
+      grid-row: 9 / span 2;
+    }
+    .pink4 {
+      grid-row: 4 / span 2;
+    }
+    .pink5 {
+      grid-column: 3 / span 2;
+      grid-row: 7 / span 2;
+    }
+    .blue1 {
+      grid-column: 4 / span 2;
+    }
+    .blue5 {
+      grid-column: 10 / span 2;
+      grid-row: 12 / span 2;
+    }
+    /* Contact */
+    .contact {
+      display: block;
+      padding: 0 10px;
+    }
+    footer {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@media all and (max-width: 440px) {
+  @supports (display: grid) {
+    /* Header */
+    .name-block {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+    }
+    .name-block h1.name {
+      grid-row: 1;
+      justify-self: center;
+    }
+    .name-block h1.surname {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+    .name-block h3 {
+      grid-column: 1 / -1;
+      grid-row: 3;
+    }
+    .name-block:before {
+      grid-column: 1;
+      align-self: start;
+    }
+    .name-block:after {
+      grid-row: 5;
+      align-self: start;
+    }
+    .name-block p {
+      grid-column: 1 / -1;
+      grid-row: 4;
+      align-self: center;
+      justify-self: end;
+      padding-right: 10px;
+      writing-mode: horizontal-tb;
+    }
+    .name-block img {
+      grid-row: 4/ 6;
+      justify-self: start;
+      z-index: 2;
+    }
+  }
+}
+@media all and (max-height: 550px) {
+  .header-wrapper {
+    height: 100%;
+  }
+}
